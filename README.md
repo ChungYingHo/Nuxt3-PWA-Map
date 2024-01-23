@@ -28,17 +28,6 @@ You must make sure to change the base url to your github repo.
 npm run generate
 ```
 
-#### Notice
-
-After generate the file for deploy, please go to `index.html` modify the link below:
-
-```html
-<!-- This one will not work for PWA -->
-<link rel="manifest" href="/manifest.webmanifest">
-<!-- Change to this one -->
-<link rel="manifest" href="./manifest.webmanifest">
-```
-
 then, deploy:
 ```bash
 npm run deploy
