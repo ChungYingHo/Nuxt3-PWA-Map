@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
@@ -22,8 +21,8 @@ export default defineNuxtConfig({
   },
   pwa: {
     // 指定 PWA 的範圍和基本路徑
-    scope: '/Simple-Map/',
-    base: '/Simple-Map/',
+    scope: '/Nuxt3-PWA-Map/',
+    base: '/Nuxt3-PWA-Map/',
     // 控制 PWA 的安裝和註冊行為
     injectRegister: 'auto',
     registerType: 'autoUpdate',
@@ -57,7 +56,7 @@ export default defineNuxtConfig({
       runtimeCaching: [
         // 當有與根路徑匹配的請求時，Service Worker 會優先使用網路請求，如果網路請求失敗，則使用緩存的資源
         {
-          urlPattern: "/Simple-Map/*",
+          urlPattern: "/Nuxt3-PWA-Map/*",
           handler: 'NetworkFirst',
         },
       ],
@@ -81,7 +80,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/Simple-Map/',
+    baseURL: '/Nuxt3-PWA-Map/',
     buildAssetsDir: '/static/'
   },
 })
